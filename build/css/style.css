@@ -167,6 +167,23 @@ body {
   }
 }
 
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: var(--text-dark);
+}
+
 .header {
   -webkit-transition: margin-bottom 0.1s linear;
   -o-transition: margin-bottom 0.1s linear;
@@ -427,9 +444,118 @@ body {
   cursor: pointer;
 }
 
+.faq {
+  padding-bottom: 375px;
+}
+
+.faq__title {
+  margin-bottom: 82px;
+}
+
+.accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+
+.accordion-item {
+  background-color: var(--bg);
+  -webkit-box-shadow: 0px 4px 36px rgba(171, 184, 236, 0.24);
+          box-shadow: 0px 4px 36px rgba(171, 184, 236, 0.24);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.accordion-item.active .accordion-header::after {
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-header {
+  padding-bottom: 20px;
+}
+
+.accordion-header {
+  position: relative;
+  background-color: var(--bg);
+  padding: 34px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--text-dark);
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  right: 34px;
+  width: 24px;
+  height: 4px;
+  border-radius: 14px;
+  background-color: var(--primary);
+}
+
+.accordion-header::after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  right: 44px;
+  width: 4px;
+  height: 24px;
+  border-radius: 14px;
+  background-color: var(--primary);
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 180%;
+  color: var(--primary);
+  -webkit-transition: max-height 0.2s ease, padding 0.2s ease;
+  -o-transition: max-height 0.2s ease, padding 0.2s ease;
+  transition: max-height 0.2s ease, padding 0.2s ease;
+}
+
+.accordion-content a {
+  color: var(--primary);
+}
+
+.accordion-item.active .accordion-content {
+  padding: 0 32px 32px 68px;
+  max-height: 1000px;
+}
+
 .footer {
+  position: relative;
   padding: 24px 0 28px;
   background-color: var(--bg);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1086px;
+  height: 1086px;
+  background: #D3C8FF;
+  -webkit-filter: blur(454.455px);
+          filter: blur(454.455px);
+  z-index: -1;
 }
 
 .footer__inner {
@@ -600,6 +726,10 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .title {
+    font-size: 32px;
+  }
+
   .nav__right {
     margin-right: 45px;
   }
@@ -610,6 +740,48 @@ body {
 
   .languages--desktop {
     display: none;
+  }
+
+  .faq {
+    padding-bottom: 200px;
+  }
+
+  .faq__title {
+    margin-bottom: 54px;
+  }
+
+  .accordion {
+    gap: 20px;
+  }
+
+  .accordion-header {
+    padding: 24px;
+    font-size: 24px;
+  }
+
+  .accordion-header::before {
+    top: 40px;
+  }
+
+  .accordion-header::after {
+    top: 31px;
+  }
+
+  .accordion-content {
+    font-size: 16px;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 0 24px 24px 24px;
+  }
+
+  .accordion-item.active .accordion-content ol {
+    padding-left: 20px;
+  }
+
+  .footer::before {
+    width: 600px;
+    height: 600px;
   }
 
   .footer__top {
@@ -741,6 +913,10 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  .title {
+    font-size: 24px;
+  }
+
   .nav {
     padding: 40px 0 10px 0;
   }
@@ -755,8 +931,49 @@ body {
     border: 0;
   }
 
+  .faq {
+    padding-bottom: 100px;
+  }
+
+  .faq__title {
+    margin-bottom: 34px;
+  }
+
+  .accordion-item.active .accordion-header {
+    padding-bottom: 30px;
+  }
+
+  .accordion-header {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .accordion-header::before {
+    top: 22px;
+  }
+
+  .accordion-header::after {
+    top: 13px;
+  }
+
+  .accordion-content {
+    font-size: 12px;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 0 12px 12px 12px;
+  }
+
+  .accordion-item.active .accordion-content ol {
+    padding-left: 16px;
+  }
+
   .footer {
     padding: 30px 0 100px;
+  }
+
+  .footer::before {
+    content: none;
   }
 
   .footer__top {

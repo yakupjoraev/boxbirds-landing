@@ -59,3 +59,22 @@ body {
     opacity: 1;
   }
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: var(--text-dark);
+
+  @media (max-width: $breakpoint992) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+  }
+}
