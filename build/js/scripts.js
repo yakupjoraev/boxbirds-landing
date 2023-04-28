@@ -62,7 +62,7 @@ function languageSelection() {
 
 languageSelection();
 
-const accordionItems = document.querySelectorAll('.accordion-item');
+const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
 
 function toggleAccordion() {
@@ -96,4 +96,44 @@ function toggleAccordion() {
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
+var swiper = new Swiper(".reviews__slider-container", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  // centeredSlides: true,
+  navigation: {
+    nextEl: '.reviews__slider-next',
+    prevEl: '.reviews__slider-prev',
+  },
+  pagination: {
+    el: '.reviews__slider-pagination',
+    type: 'progressbar',
+  },
+
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    }
+  }
+});
+
+const buttons = document.querySelectorAll('[data-more-btn]');
+
+buttons.forEach(button => {
+  const moreText = button.parentElement.querySelector('[data-more-text]');
+
+  button.addEventListener('click', function () {
+    if (moreText.style.display === 'none') {
+      moreText.style.display = 'inline';
+      button.innerText = 'Скрыть';
+      button.classList.add('hide');
+      setTimeout(() => button.style.display = 'none', 300);
+    } else {
+      moreText.style.display = 'none';
+      button.innerText = 'Читать целиком';
+      button.style.display = 'inline-block';
+      button.classList.remove('hide');
+    }
+  });
+});
 
