@@ -1,5 +1,11 @@
 @font-face {
   font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
 }
@@ -26,6 +32,7 @@
   --primary: #1B4CFB;
   --white: #ffffff;
   --bg: #F9F9FF;
+  --border: #E1E8FF;
   --text-grey: #818895;
   --text-dark: #17161B;
   --src-input: #EDF0F8;
@@ -160,9 +167,15 @@ body {
   }
 }
 
+.header {
+  -webkit-transition: margin-bottom 0.1s linear;
+  -o-transition: margin-bottom 0.1s linear;
+  transition: margin-bottom 0.1s linear;
+}
+
 .main__body.locked .header {
-  -webkit-box-shadow: 0px 3px 12px #E1E8FF;
-          box-shadow: 0px 3px 12px #E1E8FF;
+  -webkit-box-shadow: 0px 3px 12px var(--border);
+          box-shadow: 0px 3px 12px var(--border);
   margin-bottom: 40px;
 }
 
@@ -212,8 +225,8 @@ body {
   height: 48px;
   background: var(--bg);
   border: 1px solid var(--primary);
-  -webkit-box-shadow: 0px 3px 12px #E1E8FF;
-          box-shadow: 0px 3px 12px #E1E8FF;
+  -webkit-box-shadow: 0px 3px 12px var(--border);
+          box-shadow: 0px 3px 12px var(--border);
   border-radius: 14px;
 }
 
@@ -373,7 +386,7 @@ body {
 }
 
 .menu__item--line {
-  border: 1px solid #E1E8FF;
+  border: 1px solid var(--border);
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -414,8 +427,166 @@ body {
   cursor: pointer;
 }
 
-footer {
-  display: block;
+.footer {
+  padding: 24px 0 28px;
+  background-color: var(--bg);
+}
+
+.footer__inner {
+  position: relative;
+}
+
+.footer__top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 45px;
+}
+
+.footer__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 168px;
+  width: 168px;
+  height: 48px;
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  -webkit-box-shadow: 0px 3px 12px var(--border);
+          box-shadow: 0px 3px 12px var(--border);
+  border-radius: 14px;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+
+.footer__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: var(--border);
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.footer__social-link:hover {
+  background-color: var(--src-input);
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 64px;
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.footer__nav-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-dark);
+}
+
+.footer__nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--text-dark);
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.footer__nav-link:hover {
+  color: var(--primary);
+}
+
+.footer__bottom {
+  padding-top: 30px;
+  border-top: 2px solid var(--border);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #96A1C5;
+}
+
+.footer__politicals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 78px;
+  margin-bottom: 28px;
+}
+
+.footer__political {
+  color: #96A1C5;
+  opacity: 0.6;
+}
+
+.footer__copys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+.footer__copy {
+  opacity: 0.6;
 }
 
 @media (max-width: 1449.98px) {
@@ -439,6 +610,21 @@ footer {
 
   .languages--desktop {
     display: none;
+  }
+
+  .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 10px;
+    padding-top: 128px;
+  }
+
+  .footer__logo {
+    position: absolute;
+    top: 30px;
+    left: 0;
   }
 }
 
@@ -476,8 +662,8 @@ footer {
     padding: 30px 15px 20px;
     z-index: 22;
     overflow-y: auto;
-    -webkit-animation: fade 0.2s linear;
-            animation: fade 0.2s linear;
+    -webkit-animation: fade 0.1s linear;
+            animation: fade 0.1s linear;
   }
 
   .burger {
@@ -568,6 +754,60 @@ footer {
             box-shadow: none;
     border: 0;
   }
+
+  .footer {
+    padding: 30px 0 100px;
+  }
+
+  .footer__top {
+    padding-bottom: 32px;
+  }
+
+  .footer__socials {
+    gap: 12px;
+  }
+
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .footer__nav-list:last-child {
+    grid-column: span 2;
+    justify-self: end;
+    width: calc(50% - 8px);
+    border-top: 2px solid var(--border);
+  }
+
+  .footer__nav-list:last-child .footer__nav-title {
+    display: none;
+  }
+
+  .footer__bottom {
+    padding-top: 34px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .footer__politicals {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .footer__political {
+    text-align: center;
+  }
+
+  .footer__copys {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (max-width: 374px) {
@@ -580,5 +820,20 @@ footer {
     width: 80px;
     height: 36px;
     font-size: 14px;
+  }
+
+  .footer__nav {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__nav-list:last-child {
+    grid-column: span 1;
+    justify-self: start;
+    width: 100%;
+    border-top: 2px solid var(--border);
+  }
+
+  .footer__nav-list:last-child .footer__nav-title {
+    display: none;
   }
 }

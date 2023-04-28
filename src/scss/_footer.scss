@@ -1,4 +1,243 @@
 // Footer
-footer {
-    display: block;
+.footer {
+  padding: 24px 0 28px;
+  background-color: var(--bg);
+
+  @media (max-width: $breakpoint768) {
+    padding: 30px 0 100px;
+  }
+
+  // .footer__inner
+
+  &__inner {
+    position: relative;
+  }
+
+  // .footer__top
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 45px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      gap: 10px;
+      padding-top: 128px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-bottom: 32px;
+    }
+  }
+
+  // .footer__block
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // .footer__logo
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 168px;
+    width: 168px;
+    height: 48px;
+    background: var(--bg);
+    border: 1px solid var(--primary);
+    box-shadow: 0px 3px 12px var(--border);
+    border-radius: 14px;
+
+    @media (max-width: $breakpoint992) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
+  }
+
+  // .footer__logo-img
+
+  &__logo-img {}
+
+  // .footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    @media (max-width: $breakpoint768) {
+      gap: 12px;
+    }
+  }
+
+  // .footer__social
+
+  &__social {}
+
+  // .footer__social-link
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: var(--border);
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: var(--src-input);
+    }
+  }
+
+  // .footer__social-img
+
+  &__social-img {}
+
+  // .footer__nav
+
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+
+    @media (max-width: $breakpoint768) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 374px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .footer__nav-list
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: $breakpoint768) {
+      &:last-child {
+        grid-column: span 2;
+        justify-self: end;
+        width: calc(50% - 8px);
+        border-top: 2px solid var(--border);
+
+        .footer__nav-title {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 374px) {
+      &:last-child {
+        grid-column: span 1;
+        justify-self: start;
+        width: 100%;
+        border-top: 2px solid var(--border);
+
+        .footer__nav-title {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // .footer__nav-item
+
+  &__nav-item {}
+
+  // .footer__nav-title
+
+  &__nav-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--text-dark);
+  }
+
+  // .footer__nav-link
+
+  &__nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--text-dark);
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    padding-top: 30px;
+    border-top: 2px solid var(--border);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #96A1C5;
+
+    @media (max-width: $breakpoint768) {
+      padding-top: 34px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+
+  // .footer__politicals
+
+  &__politicals {
+    display: flex;
+    gap: 78px;
+    margin-bottom: 28px;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column-reverse;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  // .footer__political
+
+  &__political {
+    color: #96A1C5;
+    opacity: 0.6;
+
+    @media (max-width: $breakpoint768) {
+      text-align: center;
+    }
+  }
+
+  // .footer__copys
+
+  &__copys {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: $breakpoint768) {
+      justify-content: center;
+    }
+  }
+
+  // .footer__copy
+
+  &__copy {
+    opacity: 0.6;
+  }
 }
