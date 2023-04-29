@@ -135,3 +135,26 @@ buttons.forEach(button => {
     }
   });
 });
+
+function departureSelection() {
+  let departures = document.querySelectorAll('[data-departure]');
+  let departuresList = document.querySelectorAll('[data-departure-list]');
+  let departuresItems = document.querySelectorAll('[data-departure-item]');
+
+  departures.forEach(departure => {
+    departure.addEventListener('click', (event) => {
+      event.stopPropagation();
+      departure.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    departures.forEach(departure => {
+      if (!departure.contains(event.target)) {
+        departure.classList.remove('active');
+      }
+    });
+  });
+}
+
+departureSelection();
