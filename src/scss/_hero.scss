@@ -1,0 +1,182 @@
+.hero {
+  padding: 48px 0 180px 0;
+
+  @media (max-width: $breakpoint768) {
+    padding: 30px 0 65px 0;
+  }
+
+
+  // .hero__inner
+
+  &__inner {}
+
+  // .hero__main
+
+  &__main {
+    position: relative;
+    min-height: 485px;
+    padding: 72px 66px;
+    background-color: #EEF2FF;
+    background-image: url('../img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 46px;
+
+    @media (max-width: $breakpoint1450) {
+      min-height: 385px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      min-height: 600px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 40px 0;
+    }
+
+  }
+
+  // .hero__info
+
+  &__info {
+
+    @media (max-width: $breakpoint992) {
+      height: 100%;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    max-width: 555px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 120%;
+    color: var(--text-dark);
+
+    @media (max-width: $breakpoint992) {
+      text-align: center;
+      margin: 0 auto 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+    }
+
+  }
+
+  // .hero__descr
+
+  &__descr {
+    max-width: 500px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-dark);
+
+    @media (max-width: $breakpoint992) {
+      text-align: center;
+      margin: 0 auto 312px;
+    }
+  }
+
+  // .hero__link
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--primary);
+
+    @media (max-width: $breakpoint992) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // .hero__cards
+
+  &__cards {
+    position: absolute;
+    right: 70px;
+    top: -50px;
+
+    @media (max-width: $breakpoint1450) {
+      right: 0;
+      top: -20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  &__cards-img {
+
+    @media (max-width: $breakpoint1450) {
+      width: 70%;
+    }
+  }
+
+  // .hero__sending
+
+  &__sending {
+    position: relative;
+    margin-top: -30px;
+    z-index: 2;
+
+    @media (max-width: $breakpoint992) {
+      margin-top: 0;
+    }
+  }
+}
+
+.package {
+
+  // .package__card
+
+  &__card {}
+
+  // .package__card-top
+
+  &__card-top {}
+
+  // .package__card-img
+
+  &__card-img {}
+
+  // .package__card-info
+
+  &__card-info {}
+
+  // .package__card-title
+
+  &__card-title {}
+
+  // .package__card-sending
+
+  &__card-sending {}
+
+  // .package__card-middle
+
+  &__card-middle {}
+
+  // .package__card-group
+
+  &__card-group {}
+
+  // .package__card-label
+
+  &__card-label {}
+
+  // .package__card-detail
+
+  &__card-detail {}
+}

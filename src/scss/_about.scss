@@ -1,0 +1,43 @@
+.about {
+  padding-bottom: 206px;
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding-bottom: 60px;
+  }
+
+  // .about__title
+
+  &__title {
+    margin-bottom: 96px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // .about__descr
+
+  &__descr {
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--text-grey);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+}
