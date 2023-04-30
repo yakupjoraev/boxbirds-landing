@@ -902,6 +902,30 @@
     </div>
   </div>
 </section>
+    <!-- Modal -->
+
+<button class="open-modal-btn" data-open-modal data-modal-id="modal1" style="display: none;">Open Modal 1</button>
+<div class="modal" id="modal1" data-modal>
+  <div class="modal__content">
+    <form class="modal__form" action="#">
+      <h2>Осталось еще чуть-чуть...</h2>
+      <p>Оставь свою почту и мы отправим тебе приглашение, как только все запустим. Стань первопроходцем!</p>
+
+      <div class="modal__form-group form-group">
+        <input class="modal__form-input form-input" type="email" placeholder="Введите email" required="">
+        <label for="input" class="modal__form-label form-label">Введите email</label>
+      </div>
+
+      <div class="modal__form-btns">
+        <button type="button" class="modal__form-btn form-btn">Хочу зарабатывать!</button>
+        <button type="button" class="modal__form-btn form-btn">Хочу отправлять!</button>
+      </div>
+    </form>
+
+    <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg"
+        alt="Закрыть модальное окно"></button>
+  </div>
+</div>
   </main>
 
   <!-- Footer -->

@@ -184,6 +184,151 @@ body {
   color: var(--text-dark);
 }
 
+.form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 47px;
+  padding: 8px 15px;
+  padding-bottom: 0;
+  background-color: var(--bg);
+  border: 1px solid #96A1C5;
+  border-radius: 7px;
+  outline: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+  color: var(--text-dark);
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.form-input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: transparent;
+}
+
+.form-input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: transparent;
+}
+
+.form-input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: transparent;
+}
+
+.form-input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: transparent;
+}
+
+.form-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: transparent;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-group .form-input:-moz-placeholder-shown ~ .form-label {
+  top: 15px;
+  left: 15px;
+  cursor: text;
+}
+
+.form-group .form-input:-ms-input-placeholder ~ .form-label {
+  top: 15px;
+  left: 15px;
+  cursor: text;
+}
+
+.form-group .form-input:placeholder-shown ~ .form-label {
+  top: 15px;
+  left: 15px;
+  cursor: text;
+}
+
+.form-group .form-label {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  display: block;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 12px;
+  color: #96A1C5;
+  pointer-events: none;
+}
+
+.form-group .form-input:focus {
+  border: 1px solid #63CB75;
+}
+
+.form-group .form-input:focus ~ .form-label {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* reset input */
+
+.form-group .form-input:required,
+.form-group .form-input:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 46px;
+  width: 100%;
+  padding: 8px;
+  background-color: var(--primary);
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #F0F3FF;
+}
+
 .header {
   -webkit-transition: margin-bottom 0.1s linear;
   -o-transition: margin-bottom 0.1s linear;
@@ -1433,6 +1578,123 @@ body {
   opacity: 0.6;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-animation: fade 0.2s linear;
+          animation: fade 0.2s linear;
+}
+
+.modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+}
+
+.modal__content {
+  background-color: var(--bg);
+  -webkit-box-shadow: 11px 19px 39px rgba(211, 215, 227, 0.47);
+          box-shadow: 11px 19px 39px rgba(211, 215, 227, 0.47);
+  border-radius: 24px;
+  margin: 10% auto;
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.modal__form {
+  max-width: 780px;
+  width: 100%;
+  padding: 36px;
+  padding-top: 106px;
+  min-height: 478px;
+  background-color: var(--bg);
+  border-radius: 24px;
+  background-image: url("../img/modal-bg.png");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+  overflow: hidden;
+}
+
+.modal__form h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.modal__form p {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.modal__form-group {
+  max-width: 542px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.modal__form-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  max-width: 542px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.modal.show .modal__content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (max-width: 1449.98px) {
   .logo {
     margin-right: 30px;
@@ -2263,6 +2525,24 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .modal__form {
+    padding: 15px;
+    padding-top: 100px;
+  }
+
+  .modal__form-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+
+  .modal__close-btn {
+    top: 15px;
+    right: 15px;
   }
 }
 
