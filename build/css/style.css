@@ -658,6 +658,103 @@ body {
   color: var(--text-grey);
 }
 
+.work {
+  padding-bottom: 333px;
+}
+
+.work__title {
+  margin-bottom: 130px;
+}
+
+.work__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.work__list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: calc(100% - 260px);
+  width: 2px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='32' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.work__item {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+
+.work__item:nth-child(odd) {
+  padding-right: 30px;
+}
+
+.work__item:nth-child(even) {
+  padding-left: 35px;
+}
+
+.work__item:nth-child(odd) .work__item-count {
+  right: -28px;
+}
+
+.work__item:nth-child(even) .work__item-count {
+  left: -28px;
+}
+
+.work__item-img {
+  margin-bottom: 15px;
+}
+
+.work__item-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 20px;
+  background-color: var(--primary);
+  border-radius: 14px;
+  min-height: 54px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--bg);
+}
+
+.work__item-count {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 56px;
+  height: 54px;
+  background-color: var(--primary);
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--bg);
+}
+
 .benefits {
   position: relative;
   padding-bottom: 330px;
@@ -1800,6 +1897,26 @@ body {
     font-size: 22px;
   }
 
+  .work {
+    padding-bottom: 200px;
+  }
+
+  .work__title {
+    margin-bottom: 100px;
+  }
+
+  .work__list::before {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+
+  .work__item-descr {
+    font-size: 20px;
+  }
+
+  .work__item-count {
+    font-size: 20px;
+  }
+
   .benefits {
     padding-bottom: 200px;
   }
@@ -2172,6 +2289,70 @@ body {
 
   .about__descr {
     font-size: 16px;
+  }
+
+  .work {
+    padding-bottom: 133px;
+  }
+
+  .work__title {
+    margin-bottom: 68px;
+  }
+
+  .work__list {
+    grid-template-columns: repeat(1, 1fr);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    justify-items: start;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 150px;
+  }
+
+  .work__list::before {
+    left: 14px;
+    width: 2px;
+    height: calc(100% - 124px);
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+
+  .work__item {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .work__item:nth-child(odd) {
+    padding-right: 0;
+    padding-left: 35px;
+  }
+
+  .work__item:nth-child(odd) .work__item-count {
+    right: auto;
+    left: 0;
+  }
+
+  .work__item:nth-child(even) .work__item-count {
+    left: 0;
+  }
+
+  .work__item-descr {
+    min-height: 30px;
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  .work__item-count {
+    font-size: 16px;
+    height: 30px;
+    width: 28px;
+    border-radius: 6px;
+  }
+
+  .work__item--hidden {
+    display: none;
   }
 
   .benefits {

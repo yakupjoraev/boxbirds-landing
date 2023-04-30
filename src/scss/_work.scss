@@ -1,0 +1,190 @@
+.work {
+  padding-bottom: 333px;
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 200px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding-bottom: 133px;
+  }
+
+  // .work__inner
+
+  &__inner {}
+
+  // .work__title
+
+  &__title {
+    margin-bottom: 130px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 68px;
+    }
+  }
+
+  // .work__list
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: flex-start;
+      justify-items: start;
+      max-width: 300px;
+      margin: 0 auto;
+      gap: 150px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: calc(100% - 260px);
+      width: 2px;
+      // transform: rotate(-90deg);
+      // border: 2px dashed var(--primary);
+      // background-image: linear-gradient(to right, var(--bg) 50%, var(--primary) 50%);
+      // background-size: 40px 2px;
+      // background-repeat: repeat-x;
+
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='32' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+      @media (max-width: $breakpoint992) {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      }
+
+      @media (max-width: $breakpoint768) {
+        left: 14px;
+        width: 2px;
+        height: calc(100% - 124px);
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231B4CFBFF' stroke-width='4' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      }
+    }
+
+  }
+
+  // .work__item
+
+  &__item {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      width: fit-content;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 30px;
+
+      @media (max-width: $breakpoint768) {
+        padding-right: 0;
+        padding-left: 35px;
+      }
+    }
+
+    &:nth-child(even) {
+      padding-left: 35px;
+    }
+
+    &:nth-child(odd) .work__item-count {
+      right: -28px;
+
+      @media (max-width: $breakpoint768) {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    &:nth-child(even) .work__item-count {
+      left: -28px;
+
+      @media (max-width: $breakpoint768) {
+        left: 0;
+      }
+    }
+  }
+
+  // .work__item-img
+
+  &__item-img {
+    margin-bottom: 15px;
+  }
+
+  // .work__item-descr
+
+  &__item-descr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background-color: var(--primary);
+    border-radius: 14px;
+    min-height: 54px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--bg);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      min-height: 30px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  }
+
+  // .work__item-count
+
+  &__item-count {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 54px;
+    background-color: var(--primary);
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--bg);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+      height: 30px;
+      width: 28px;
+      border-radius: 6px;
+    }
+  }
+
+  // .work__item--hidden
+
+  &__item--hidden {
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+}
