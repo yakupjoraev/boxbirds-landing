@@ -1,6 +1,7 @@
 <!-- Modal -->
 
-<button class="open-modal-btn" data-open-modal data-modal-id="modal1" style="display: none;">Open Modal 1</button>
+<!-- Осталось еще чуть-чуть... -->
+<button class="open-modal-btn" data-open-modal data-modal-id="modal1">Open Modal 1</button>
 <div class="modal" id="modal1" data-modal>
   <div class="modal__content">
     <form class="modal__form" action="#">
@@ -16,6 +17,158 @@
         <button type="button" class="modal__form-btn form-btn">Хочу зарабатывать!</button>
         <button type="button" class="modal__form-btn form-btn">Хочу отправлять!</button>
       </div>
+
+      <div class="modal__form-decor"></div>
+      <div class="modal__form-decorr"></div>
+    </form>
+
+    <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg"
+        alt="Закрыть модальное окно"></button>
+  </div>
+</div>
+
+
+<!-- Вход в личный кабинет  -->
+<button class="open-modal-btn" data-open-modal data-modal-id="modal2">Open Modal 2</button>
+<div class="modal" id="modal2" data-modal>
+  <div class="modal__content">
+    <form class="modal__form sign-form" action="#">
+      <div class="sign-form__top">
+        <p class="sign-form__top-text">
+          Еще нет аккаунта?
+        </p>
+
+        <a class="sign-form__top-link" href="#">Регистрация</a>
+      </div>
+
+      <div class="sign-form__inner">
+        <h2>Вход в личный кабинет </h2>
+
+        <div class="modal__form-group form-group">
+          <input class="modal__form-input form-input" type="text" placeholder="Логин" required="">
+          <label for="input" class="modal__form-label form-label">Логин</label>
+        </div>
+
+        <div class="modal__form-group form-group">
+          <input class="modal__form-input form-input" type="password" placeholder="Пароль" required="">
+          <label for="input" class="modal__form-label form-label">Пароль</label>
+          <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+        </div>
+
+        <button type="button" class="sign-form__btn form-btn">Войти</button>
+
+        <div class="sign-form__apps">
+          <a class="sign-form__app" href="#">
+            <span>
+              Войти через Apple
+            </span>
+
+            <img src="./img/app-apple.svg" alt="Войти через Apple">
+          </a>
+          <a class="sign-form__app" href="#">
+            <span>
+              Войти через Google
+            </span>
+
+            <img src="./img/app-google.svg" alt="Войти через Google">
+          </a>
+        </div>
+
+        <a class="sign-form__footer-link" href="#">Забыли логин или пароль?</a>
+      </div>
+
+    </form>
+
+    <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg"
+        alt="Закрыть модальное окно"></button>
+  </div>
+</div>
+
+<!-- Регистрация -->
+
+<button class="open-modal-btn" data-open-modal data-modal-id="modal3">Open Modal 3</button>
+<div class="modal" id="modal3" data-modal>
+  <div class="modal__content">
+    <form class="modal__form sign-form signup-form" action="#">
+      <div class="sign-form__top">
+        <p class="sign-form__top-text">
+          Уже есть аккаунт?
+        </p>
+
+        <a class="sign-form__top-link" href="#">Войти</a>
+      </div>
+
+      <div class="sign-form__inner">
+        <h2>Регистрация</h2>
+
+        <div class="modal__form-group form-group">
+          <input class="modal__form-input form-input" type="text" placeholder="Имя" required="">
+          <label for="input" class="modal__form-label form-label">Имя</label>
+        </div>
+
+        <div class="modal__form-group form-group">
+          <input class="modal__form-input form-input" type="text" placeholder="Фамилия" required="">
+          <label for="input" class="modal__form-label form-label">Фамилия</label>
+        </div>
+
+        <div class="modal__form-group form-group">
+          <input class="modal__form-input form-input" type="email" placeholder="Email" required="">
+          <label for="input" class="modal__form-label form-label">Email</label>
+        </div>
+
+        <div class="modal__form-groups">
+          <div class="modal__form-group form-group">
+            <input class="modal__form-input form-input" type="password" placeholder="Пароль" required="">
+            <label for="input" class="modal__form-label form-label">Пароль</label>
+            <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+          </div>
+
+          <div class="modal__form-group form-group">
+            <input class="modal__form-input form-input" type="password" placeholder="Повторите пароль" required="">
+            <label for="input" class="modal__form-label form-label">Повторите пароль</label>
+            <button class="form-eye" type="button"><img src="./img/eye-close.svg" alt="не видно"></button>
+          </div>
+        </div>
+
+        <input class="modal__form-checkbox" type="checkbox" id="form-checkbox">
+
+        <label class="modal__form-checkbox-label" for="form-checkbox">
+          <div class="modal__form-checkbox-decor">
+
+          </div>
+
+          <div class="modal__form-checkbox-text">
+            Я принимаю
+            <a class="modal__form-checkbox-link" href="#"> Пользовательское соглашение</a>
+            и
+            <a class="modal__form-checkbox-link" href="#">Политику конфиденциальности</a>
+          </div>
+        </label>
+
+        <button type="button" class="sign-form__btn form-btn" disabled>Зарегистрироваться</button>
+
+        <a class="sign-form__footer-link" href="#">или</a>
+
+        <div class="sign-form__apps">
+          <a class="sign-form__app" href="#">
+            <span>
+              Войти через Apple
+            </span>
+
+            <img src="./img/app-apple.svg" alt="Войти через Apple">
+          </a>
+          <a class="sign-form__app" href="#">
+            <span>
+              Войти через Google
+            </span>
+
+            <img src="./img/app-google.svg" alt="Войти через Google">
+          </a>
+        </div>
+
+
+      </div>
+
     </form>
 
     <button class="modal__close-btn" data-modal-close><img src="./img/modal-close.svg"

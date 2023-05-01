@@ -165,4 +165,24 @@ body {
   font-size: 20px;
   line-height: 150%;
   color: #F0F3FF;
+  transition: background-color 0.2s linear;
+
+  &:disabled {
+    cursor: default;
+    background-color: var(--border);
+    color: var(--text-grey);
+  }
+}
+
+.form-eye {
+  position: absolute;
+  right: 16px;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: transparent;
+
+  img {
+    user-select: none;
+    pointer-events: none;
+  }
 }
