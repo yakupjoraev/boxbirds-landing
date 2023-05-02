@@ -110,6 +110,15 @@ body {
   width: 100%;
 }
 
+.form-error {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+  color: #DC5068;
+}
+
 
 .form-group .form-input:placeholder-shown~.form-label {
   top: 15px;
