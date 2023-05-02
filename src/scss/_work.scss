@@ -42,7 +42,8 @@
       justify-items: start;
       max-width: 300px;
       margin: 0 auto;
-      gap: 150px;
+      column-gap: 150px;
+      row-gap: 150px;
     }
 
     &::before {

@@ -145,11 +145,13 @@
 
   &__card-top {
     display: flex;
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 16px;
     margin-bottom: 30px;
 
     @media (max-width: $breakpoint768) {
-      gap: 14px;
+      column-gap: 14px;
+      row-gap: 14px;
     }
 
   }
@@ -183,14 +185,16 @@
   &__card-title {
     display: flex;
     align-items: center;
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 16px;
     font-weight: 800;
     font-size: 24px;
     line-height: 150%;
     color: var(--text-dark);
 
     @media (max-width: $breakpoint768) {
-      gap: 14px;
+      column-gap: 14px;
+      row-gap: 14px;
       font-size: 20px;
     }
 
@@ -199,7 +203,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 4px;
+      column-gap: 4px;
+      row-gap: 4px;
       width: 45px;
       min-width: 45px;
       height: 18px;
@@ -212,7 +217,8 @@
       color: var(--bg);
 
       @media (max-width: $breakpoint768) {
-        gap: 3px;
+        column-gap: 3px;
+        row-gap: 3px;
         width: 40px;
         min-width: 40px;
         height: 16px;
@@ -241,7 +247,8 @@
   &__card-middle {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 40px;
+    column-gap: 40px;
+    row-gap: 30px;
     margin-bottom: 38px;
   }
 
@@ -250,7 +257,8 @@
   &__card-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 
   // .package__card-label
@@ -272,7 +280,8 @@
   &__card-detail {
     display: flex;
     align-items: center;
-    gap: 8px;
+    column-gap: 8px;
+    row-gap: 8px;
     flex-wrap: wrap;
     font-weight: 500;
     font-size: 16px;
@@ -355,7 +364,8 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 15px;
+    column-gap: 15px;
+    row-gap: 15px;
     padding: 15px;
     background-color: var(--bg);
     box-shadow: 11px 19px 39px rgba(211, 215, 227, 0.47);
@@ -367,7 +377,8 @@
     }
 
     @media (max-width: $breakpoint768) {
-      gap: 12px;
+      column-gap: 12px;
+      row-gap: 12px;
       padding: 12px;
       border-radius: 14px;
     }
@@ -408,7 +419,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    column-gap: 12px;
+    row-gap: 12px;
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
@@ -429,7 +441,8 @@
     left: 0;
     display: none;
     flex-direction: column;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
     width: 100%;
     padding: 20px;
     border: 1px solid var(--primary);
@@ -440,7 +453,8 @@
 
     @media (max-width: $breakpoint768) {
       padding: 12px;
-      gap: 12px;
+      column-gap: 12px;
+      row-gap: 12px;
     }
   }
 
@@ -469,7 +483,8 @@
     flex: 0 1 458px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
     height: 71px;
 
     &::before {
@@ -497,7 +512,8 @@
 
     @media (max-width: $breakpoint768) {
       height: 48px;
-      gap: 12px;
+      column-gap: 12px;
+      row-gap: 12px;
     }
   }
 
@@ -568,7 +584,8 @@
   &__datapicker-data {
     display: flex;
     align-items: center;
-    gap: 12px;
+    column-gap: 12px;
+    row-gap: 12px;
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
