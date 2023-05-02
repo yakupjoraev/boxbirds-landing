@@ -6,29 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
+  <link rel="stylesheet" href="./css/jquery-ui.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="main__body">
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="header">
   <!-- Navbar -->
   <nav class="nav">
     <div class="container">
       <div class="navbar">
         <div class="logo">
-          <a class="logo__link" href="#">
+          <a class="logo__link" href="#header">
             <img class="logo__img" src="./img/logo.svg" alt="логотип Box Birds" />
           </a>
         </div>
 
         <ul class="menu menu--desktop" data-menu-desktop>
-          <li class="menu__item" data-menu-item><a href="#" class="menu__item-link active" data-scroll>О нас</a></li>
-          <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Преимущества</a></li>
-          <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Заявки</a></li>
-          <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Отзывы</a></li>
-          <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Вопросы и ответы</a>
+          <li class="menu__item" data-menu-item><a href="#about" class="menu__item-link active" data-scroll>О нас</a>
+          </li>
+          <li class="menu__item" data-menu-item><a href="#benefits" class="menu__item-link" data-scroll>Преимущества</a>
+          </li>
+          <li class="menu__item" data-menu-item><a href="#package" class="menu__item-link" data-scroll>Заявки</a></li>
+          <li class="menu__item" data-menu-item><a href="#reviews" class="menu__item-link" data-scroll>Отзывы</a></li>
+          <li class="menu__item" data-menu-item><a href="#faq" class="menu__item-link" data-scroll>Вопросы и ответы</a>
           </li>
         </ul>
 
@@ -38,27 +41,31 @@
             <ul class="languages__list">
               <li class="languages__item selected" data-languages-item>RU</li>
               <li class="languages__item" data-languages-item>EN</li>
-              <li class="languages__item" data-languages-item>FR</li>
             </ul>
           </div>
 
           <ul class="submenu">
             <li class="menu__item menu__item--line"></li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link active" data-scroll>О компании</a>
+            <li class="menu__item" data-menu-item><a href="#about" class="menu__item-link active" data-scroll>О
+                компании</a>
             </li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Как мы работаем</a>
+            <li class="menu__item" data-menu-item><a href="#work" class="menu__item-link" data-scroll>Как мы
+                работаем</a>
             </li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Преимущества</a></li>
+            <li class="menu__item" data-menu-item><a href="#benefits" class="menu__item-link"
+                data-scroll>Преимущества</a></li>
             <li class="menu__item menu__item--line"></li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Активные заявки</a>
+            <li class="menu__item" data-menu-item><a href="#package" class="menu__item-link" data-scroll>Активные
+                заявки</a>
             </li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Отзывы
+            <li class="menu__item" data-menu-item><a href="#reviews" class="menu__item-link" data-scroll>Отзывы
                 пользователей</a>
             </li>
-            <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Вопросы</a></li>
+            <li class="menu__item" data-menu-item><a href="#faq" class="menu__item-link" data-scroll>Вопросы</a></li>
             <li class="menu__item" data-menu-item><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
           </ul>
-          <a href="#" class="menu__item-link--registr" data-menu-item data-scroll>Зарегистрироваться</a>
+          <a href="#" class="menu__item-link--registr" data-menu-item data-scroll data-open-modal
+            data-modal-id="modal1">Зарегистрироваться</a>
         </ul>
 
         <div class="nav__right">
@@ -67,12 +74,11 @@
             <ul class="languages__list">
               <li class="languages__item selected" data-languages-item>RU</li>
               <li class="languages__item" data-languages-item>EN</li>
-              <li class="languages__item" data-languages-item>FR</li>
             </ul>
           </div>
 
 
-          <a class="enter" href="#">Войти</a>
+          <a class="enter" href="#" data-open-modal data-modal-id="modal1">Войти</a>
         </div>
         <div class="burger" data-burger>
           <span></span>
@@ -98,7 +104,7 @@
             Box Birds - мы поможем быстро и легко найти перевозчика или отправителя, и заработать на доставке!
           </p>
 
-          <a class="hero__link" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <a class="hero__link" href="#" data-open-modal data-modal-id="modal1">УЗНАТЬ БОЛЬШЕ</a>
         </div>
 
         <div class="hero__cards">
@@ -123,29 +129,26 @@
 
           <div class="sending__cities">
             <div class="sending__city">
-              <input class="sending__city-input" type="text" value="Москва">
+              <input class="sending__city-input" type="text" placeholder="Откуда">
             </div>
 
             <div class="sending__city">
-              <input class="sending__city-input" type="text" value="Рим">
+              <input class="sending__city-input" type="text" placeholder="Куда">
             </div>
           </div>
 
           <div class="sending__datapicker">
-            <div class="sending__datapicker-data">
-              23.04.2023
-
-              <img class="sending__datapicker-img" src="./img/datapicker.svg" alt="логотип календаря">
-            </div>
+            <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000">
           </div>
 
-          <button type="button" class="sending__btn">Найти</button>
+
+          <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
         </div>
       </form>
     </div>
   </div>
 </section>
-    <section class="about">
+    <section class="about" id="about">
   <div class="container">
     <h2 class="about__title title">
       О нас
@@ -157,7 +160,7 @@
     </p>
   </div>
 </section>
-    <section class="work">
+    <section class="work" id="work">
   <div class="container">
     <div class="work__inner">
       <h3 class="work__title title">
@@ -171,7 +174,7 @@
             <img class="work__item-img" src="./img/work/registration.png" alt="Регистрация">
           </picture>
 
-          <p class="work__item-descr">
+          <p class="work__item-descr" data-open-modal data-modal-id="modal1" style="cursor: pointer;">
             Регистрация
           </p>
 
@@ -241,7 +244,7 @@
     </div>
   </div>
 </section>
-    <section class="benefits">
+    <section class="benefits" id="benefits">
   <div class="container">
     <div class="benefits__inner">
       <h3 class="benefits__title title">
@@ -313,7 +316,7 @@
     </div>
   </div>
 </section>
-    <section class="package">
+    <section class="package" id="package">
   <div class="container">
     <h3 class="package__title title">
       Возьми посылку прямо сейчас
@@ -340,23 +343,19 @@
 
         <div class="sending__cities">
           <div class="sending__city">
-            <input class="sending__city-input" type="text" value="Москва">
+            <input class="sending__city-input" type="text" placeholder="Откуда">
           </div>
 
           <div class="sending__city">
-            <input class="sending__city-input" type="text" value="Рим">
+            <input class="sending__city-input" type="text" placeholder="Куда">
           </div>
         </div>
 
         <div class="sending__datapicker">
-          <div class="sending__datapicker-data">
-            23.04.2023
-
-            <img class="sending__datapicker-img" src="./img/datapicker.svg" alt="логотип календаря">
-          </div>
+          <input class="sending__datapicker-input" type="text" id="datepicker-2" placeholder="00.00.0000">
         </div>
 
-        <button type="button" class="sending__btn">Найти</button>
+        <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
       </div>
     </form>
 
@@ -414,7 +413,7 @@
               </div>
             </div>
 
-            <a class="package__card-link" href="#">Узнать больше</a>
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
           </li>
 
           <li class="package__card">
@@ -468,119 +467,7 @@
               </div>
             </div>
 
-            <a class="package__card-link" href="#">Узнать больше</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <ul class="package__cards">
-          <li class="package__card">
-            <div class="package__card-top">
-              <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
-
-              <div class="package__card-info">
-                <h4 class="package__card-title">
-                  София
-
-                  <span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z"
-                        fill="#FFE600" />
-                    </svg>
-
-                    4.8
-                  </span>
-                </h4>
-
-                <div class="package__card-sending">
-                  Уже доставила: 142 посылки
-                </div>
-              </div>
-            </div>
-
-            <div class="package__card-middle">
-              <div class="package__card-group">
-                <p class="package__card-label">Маршрут:</p>
-
-                <div class="package__card-detail">
-                  <p>Москва</p>
-                  <img src="./img/arrow-right.svg" alt="arrow">
-                  <p>Рим</p>
-                </div>
-              </div>
-              <div class="package__card-group">
-                <p class="package__card-label">Дата:</p>
-
-                <div class="package__card-detail">
-                  <p>23.04.2023</p>
-                </div>
-              </div>
-              <div class="package__card-group">
-                <p class="package__card-label">Тип посылки:</p>
-
-                <div class="package__card-detail">
-                  <p>Портфель 5 кг</p>
-                </div>
-              </div>
-            </div>
-
-            <a class="package__card-link" href="#">Узнать больше</a>
-          </li>
-
-          <li class="package__card">
-            <div class="package__card-top">
-              <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
-
-              <div class="package__card-info">
-                <h4 class="package__card-title">
-                  София
-
-                  <span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z"
-                        fill="#FFE600" />
-                    </svg>
-
-                    4.8
-                  </span>
-                </h4>
-
-                <div class="package__card-sending">
-                  Уже доставила: 142 посылки
-                </div>
-              </div>
-            </div>
-
-            <div class="package__card-middle">
-              <div class="package__card-group">
-                <p class="package__card-label">Маршрут:</p>
-
-                <div class="package__card-detail">
-                  <p>Москва</p>
-                  <img src="./img/arrow-right.svg" alt="arrow">
-                  <p>Рим</p>
-                </div>
-              </div>
-              <div class="package__card-group">
-                <p class="package__card-label">Дата:</p>
-
-                <div class="package__card-detail">
-                  <p>23.04.2023</p>
-                </div>
-              </div>
-              <div class="package__card-group">
-                <p class="package__card-label">Тип посылки:</p>
-
-                <div class="package__card-detail">
-                  <p>Портфель 5 кг</p>
-                </div>
-              </div>
-            </div>
-
-            <a class="package__card-link" href="#">Узнать больше</a>
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
           </li>
         </ul>
       </li>
@@ -638,7 +525,7 @@
               </div>
             </div>
 
-            <a class="package__card-link" href="#">Узнать больше</a>
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
           </li>
 
           <li class="package__card">
@@ -692,23 +579,131 @@
               </div>
             </div>
 
-            <a class="package__card-link" href="#">Узнать больше</a>
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <ul class="package__cards">
+          <li class="package__card">
+            <div class="package__card-top">
+              <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+              <div class="package__card-info">
+                <h4 class="package__card-title">
+                  София
+
+                  <span>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z"
+                        fill="#FFE600" />
+                    </svg>
+
+                    4.8
+                  </span>
+                </h4>
+
+                <div class="package__card-sending">
+                  Уже доставила: 142 посылки
+                </div>
+              </div>
+            </div>
+
+            <div class="package__card-middle">
+              <div class="package__card-group">
+                <p class="package__card-label">Маршрут:</p>
+
+                <div class="package__card-detail">
+                  <p>Москва</p>
+                  <img src="./img/arrow-right.svg" alt="arrow">
+                  <p>Рим</p>
+                </div>
+              </div>
+              <div class="package__card-group">
+                <p class="package__card-label">Дата:</p>
+
+                <div class="package__card-detail">
+                  <p>23.04.2023</p>
+                </div>
+              </div>
+              <div class="package__card-group">
+                <p class="package__card-label">Тип посылки:</p>
+
+                <div class="package__card-detail">
+                  <p>Портфель 5 кг</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
+          </li>
+
+          <li class="package__card">
+            <div class="package__card-top">
+              <img class="package__card-img" src="./img/reviews-pic.jpg" alt="София">
+
+              <div class="package__card-info">
+                <h4 class="package__card-title">
+                  София
+
+                  <span>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5 0L3.67674 3.75107H0L2.99894 6.05092L1.66383 10L5 7.53299L8.33602 10L7.00091 6.05092L10 3.75107H6.32326L5 0Z"
+                        fill="#FFE600" />
+                    </svg>
+
+                    4.8
+                  </span>
+                </h4>
+
+                <div class="package__card-sending">
+                  Уже доставила: 142 посылки
+                </div>
+              </div>
+            </div>
+
+            <div class="package__card-middle">
+              <div class="package__card-group">
+                <p class="package__card-label">Маршрут:</p>
+
+                <div class="package__card-detail">
+                  <p>Москва</p>
+                  <img src="./img/arrow-right.svg" alt="arrow">
+                  <p>Рим</p>
+                </div>
+              </div>
+              <div class="package__card-group">
+                <p class="package__card-label">Дата:</p>
+
+                <div class="package__card-detail">
+                  <p>23.04.2023</p>
+                </div>
+              </div>
+              <div class="package__card-group">
+                <p class="package__card-label">Тип посылки:</p>
+
+                <div class="package__card-detail">
+                  <p>Портфель 5 кг</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="package__card-link" href="#" data-open-modal data-modal-id="modal1">Узнать больше</a>
           </li>
 
           <li class="package__cards-more">
-            <a class="package__cards-more-link" href="#">Просмотреть еще</a>
+            <a class="package__cards-more-link" href="#" data-open-modal data-modal-id="modal1">Просмотреть еще</a>
           </li>
         </ul>
       </li>
-
-
-
-
 
     </ul>
   </div>
 </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
   <div class="container">
     <div class="reviews__inner">
       <h3 class="reviews__title title">
@@ -935,7 +930,7 @@
   </div>
 
 </section>
-    <section class="faq">
+    <section class="faq" id="faq">
   <div class="container">
     <div class="faq__inner">
       <h3 class="faq__title title">
@@ -989,7 +984,7 @@
     <!-- Modal -->
 
 <!-- Осталось еще чуть-чуть... -->
-<button class="open-modal-btn" data-open-modal data-modal-id="modal1">Open Modal 1</button>
+<button class="open-modal-btn" data-open-modal data-modal-id="modal1" style="display: none;">Open Modal 1</button>
 <div class="modal" id="modal1" data-modal>
   <div class="modal__content">
     <form class="modal__form" action="#">
@@ -1017,7 +1012,7 @@
 
 
 <!-- Вход в личный кабинет  -->
-<button class="open-modal-btn" data-open-modal data-modal-id="modal2">Open Modal 2</button>
+<button class="open-modal-btn" data-open-modal data-modal-id="modal2" style="display: none;">Open Modal 2</button>
 <div class="modal" id="modal2" data-modal>
   <div class="modal__content">
     <form class="modal__form sign-form" action="#">
@@ -1074,7 +1069,7 @@
 
 <!-- Регистрация -->
 
-<button class="open-modal-btn" data-open-modal data-modal-id="modal3">Open Modal 3</button>
+<button class="open-modal-btn" data-open-modal data-modal-id="modal3" style="display: none;">Open Modal 3</button>
 <div class="modal" id="modal3" data-modal>
   <div class="modal__content">
     <form class="modal__form sign-form signup-form" action="#">
@@ -1171,7 +1166,7 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__block">
-          <a class="footer__logo" href="#">
+          <a class="footer__logo" href="#header">
             <img class="footer__logo-img" src="./img/logo.svg" alt="logo BoxBirds">
           </a>
 
@@ -1200,9 +1195,9 @@
             <li class="footer__nav-item">
               <h4 class="footer__nav-title">О сервисе</h4>
             </li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">О нас</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Этапы работы</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Активные заявки</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#about">О нас</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#work">Этапы работы</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#package">Активные заявки</a></li>
           </ul>
 
           <ul class="footer__nav-list">
@@ -1210,9 +1205,11 @@
               <h4 class="footer__nav-title">Дополнительная информация</h4>
             </li>
             <li class="footer__nav-item"><a class="footer__nav-link" href="#">Верификация</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Частые вопросы</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Запрещенные предметы</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Правовая документация</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#faq">Частые вопросы</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#" data-open-modal
+                data-modal-id="modal1">Запрещенные предметы</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#" data-open-modal
+                data-modal-id="modal1">Правовая документация</a></li>
           </ul>
 
           <ul class="footer__nav-list">
@@ -1227,11 +1224,11 @@
 
       <div class="footer__bottom">
         <div class="footer__politicals">
-          <a class="footer__political" href="#">
+          <a class="footer__political" href="#" data-open-modal data-modal-id="modal1">
             Политика конфедициальности
           </a>
 
-          <a class="footer__political" href="#">
+          <a class="footer__political" href="#" data-open-modal data-modal-id="modal1">
             Соглашение на обработку персональных данных
           </a>
         </div>
@@ -1252,6 +1249,8 @@
 
 </body>
 
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 

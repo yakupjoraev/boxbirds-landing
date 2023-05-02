@@ -544,6 +544,10 @@
     padding: 10px;
     background-color: var(--src-input);
     border-radius: 14px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--text-dark);
     cursor: pointer;
 
     @media (max-width: $breakpoint992) {
@@ -555,6 +559,7 @@
       justify-content: space-between;
       height: 48px;
       padding: 12px 14px;
+      font-size: 16px;
     }
   }
 
@@ -572,6 +577,28 @@
     @media (max-width: $breakpoint768) {
       width: 100%;
       justify-content: space-between;
+      font-size: 16px;
+    }
+  }
+
+  &__datapicker-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 71px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--src-input);
+    border-radius: 14px;
+    outline: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--text-dark);
+
+    @media (max-width: $breakpoint768) {
+      height: 48px;
+      padding: 12px 14px;
       font-size: 16px;
     }
   }

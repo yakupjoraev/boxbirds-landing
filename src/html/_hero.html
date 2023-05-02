@@ -12,7 +12,7 @@
             Box Birds - мы поможем быстро и легко найти перевозчика или отправителя, и заработать на доставке!
           </p>
 
-          <a class="hero__link" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <a class="hero__link" href="#" data-open-modal data-modal-id="modal1">УЗНАТЬ БОЛЬШЕ</a>
         </div>
 
         <div class="hero__cards">
@@ -37,23 +37,20 @@
 
           <div class="sending__cities">
             <div class="sending__city">
-              <input class="sending__city-input" type="text" value="Москва">
+              <input class="sending__city-input" type="text" placeholder="Откуда">
             </div>
 
             <div class="sending__city">
-              <input class="sending__city-input" type="text" value="Рим">
+              <input class="sending__city-input" type="text" placeholder="Куда">
             </div>
           </div>
 
           <div class="sending__datapicker">
-            <div class="sending__datapicker-data">
-              23.04.2023
-
-              <img class="sending__datapicker-img" src="./img/datapicker.svg" alt="логотип календаря">
-            </div>
+            <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000">
           </div>
 
-          <button type="button" class="sending__btn">Найти</button>
+
+          <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
         </div>
       </form>
     </div>

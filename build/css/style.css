@@ -1248,6 +1248,10 @@ body {
   padding: 10px;
   background-color: var(--src-input);
   border-radius: 14px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--text-dark);
   cursor: pointer;
 }
 
@@ -1259,6 +1263,28 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--text-dark);
+}
+
+.sending__datapicker-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 71px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--src-input);
+  border-radius: 14px;
+  outline: 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
@@ -2842,6 +2868,7 @@ p.sign-form__top-text {
             justify-content: space-between;
     height: 48px;
     padding: 12px 14px;
+    font-size: 16px;
   }
 
   .sending__datapicker-data {
@@ -2849,6 +2876,12 @@ p.sign-form__top-text {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .sending__datapicker-input {
+    height: 48px;
+    padding: 12px 14px;
     font-size: 16px;
   }
 
