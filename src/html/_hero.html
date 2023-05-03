@@ -23,16 +23,24 @@
       <form action="#" class="hero__sending sending">
         <div class="sending__inner">
           <div class="sending__departure" data-departure>
-            <div class="sending__departure-select">
+            <!-- <div class="sending__departure-select">
               Отправить
 
               <img src="./img/arrow-down.svg" alt="arrow">
-            </div>
+            </div> -->
 
+
+            <!-- 
             <ul class="sending__departure-list" data-departure-list>
               <li class="sending__departure-item active" data-departure-item>Отправить</li>
               <li class="sending__departure-item" data-departure-item>Перевезти</li>
-            </ul>
+            </ul> -->
+
+            <select name="sending" id="sending" class="sending__departure-list">
+              <option selected="selected" class="sending__departure-item active">Отправить</option>
+              <option class="sending__departure-item">Перевезти</option>
+            </select>
+            <img src="./img/arrow-down.svg" alt="arrow">
           </div>
 
           <div class="sending__cities">

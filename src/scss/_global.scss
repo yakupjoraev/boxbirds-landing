@@ -195,3 +195,125 @@ body {
     pointer-events: none;
   }
 }
+
+.ui-selectmenu-button {
+  flex: 0 1 214px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 71px;
+  padding: 10px;
+  background-color: var(--src-input);
+  border-radius: 14px;
+  cursor: pointer;
+
+  &.active .sending__departure-list {
+    display: flex;
+  }
+
+  @media (max-width: $breakpoint992) {
+    flex: 0 1 auto;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint768) {
+    justify-content: flex-start;
+    height: 48px;
+    padding: 13px 13px 10px 13px;
+  }
+}
+
+.ui-selectmenu-button.ui-button {
+  width: 100%;
+}
+
+.ui-button {
+  border: 0;
+  background: none;
+}
+
+.ui-button .ui-icon {
+  background: none;
+  width: 0;
+  height: 0;
+}
+
+.ui-button:hover,
+.ui-button:focus {
+  border: 0;
+  background: inherit;
+}
+
+
+
+.ui-selectmenu-menu .ui-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--primary);
+  border-radius: 14px;
+  background-color: var(--bg);
+  animation: fade 0.2s linear;
+  z-index: 2;
+
+  @media (max-width: $breakpoint768) {
+    padding: 12px;
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+}
+
+.ui-menu .ui-state-active {
+  margin: 0;
+}
+
+.ui-widget-content {
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+.ui-selectmenu-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--text-dark);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary);
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 16px;
+  }
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-menu .ui-menu-item-wrapper {
+  border: 0;
+  background: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--text-dark);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary);
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 16px;
+  }
+}
+
+.ui-menu .ui-menu-item-wrapper:hover {
+  background-color: inherit;
+}

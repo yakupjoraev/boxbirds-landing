@@ -402,6 +402,17 @@
       display: flex;
     }
 
+    & img {
+      position: absolute;
+      right: 30px;
+      user-select: none;
+      pointer-events: none;
+
+      @media (max-width: $breakpoint768) {
+        right: 15px;
+      }
+    }
+
     @media (max-width: $breakpoint992) {
       flex: 0 1 auto;
       width: 100%;
