@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.woff") format("woff");
@@ -482,6 +484,216 @@ body {
   background-color: inherit;
 }
 
+/*datapicker*/
+
+.datepicker {
+  position: absolute;
+}
+
+.datepicker table tr td span.focused,
+.datepicker table tr td span:hover {
+  color: #000000;
+}
+
+.datepicker-years .datepicker-switch {
+  visibility: hidden;
+}
+
+.datepicker-prev {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker-prev::before {
+  content: url("../img/prev.svg");
+}
+
+.datepicker-next {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker-next::before {
+  content: url("../img/next.svg");
+}
+
+.datepicker.datepicker-dropdown {
+  border-radius: 10px;
+  border: 0px;
+  background-color: #F9F9FF !important;
+  -webkit-box-shadow: 11px 19px 39px 0px rgba(211, 215, 227, 0.47);
+          box-shadow: 11px 19px 39px 0px rgba(211, 215, 227, 0.47);
+}
+
+.day,
+.datepicker-switch,
+.month,
+.year {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.day:hover,
+.datepicker-switch:hover,
+.month:hover,
+.year:hover {
+  background-color: #E1E8FF !important;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.day.active,
+.datepicker-switch.active,
+.month.active,
+.year.active {
+  background: #B4C0E9 !important;
+}
+
+.day,
+.month,
+.year {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 8px;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+.day.new,
+.day.old,
+.month.new,
+.month.old,
+.year.new,
+.year.old {
+  color: #818895 !important;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom::before {
+  content: url("../img/datepicker-arrow.svg");
+  border: none;
+  top: -12px !important;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom::after {
+  display: none;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom:after .dow {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.datepicker-days::before {
+  content: "Выберите дату";
+  color: #1B4CFB;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 10px 0px 25px 0px;
+}
+
+.sending__datapicker-input {
+  background-image: url(../img/datapicker.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px);
+  background-color: #EDF0F8;
+  font-weight: 500;
+  font-size: 15px;
+  color: #17161B;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.sending__datapicker-input::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  cursor: pointer;
+}
+
+.sending__datapicker-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sending__datapicker-input::-webkit-input-placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sending__datapicker-input::-moz-placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sending__datapicker-input:-ms-input-placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sending__datapicker-input::-ms-input-placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sending__datapicker-input::placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.datepicker tfoot::before {
+  content: "Готово";
+  color: #1B4CFB;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-right: 12px;
+  margin: 23px 0px 10px 0px;
+  cursor: pointer;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 24px;
+  height: 24px;
+  margin: 5px 5px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px !important;
+  padding: 3px 4px;
+}
+
+.datepicker table tr td.highlighted {
+  background: #E1E8FF;
+}
+
+.datepicker .datepicker-switch,
+.datepicker .next,
+.datepicker .prev {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker .datepicker-switch {
+  margin-bottom: -3px;
+}
+
+.datepicker-years td,
+.datepicker-years th,
+.datepicker-months td,
+.datepicker-months th {
+  display: table-cell;
+}
+
 .header {
   -webkit-transition: margin-bottom 0.1s linear;
   -o-transition: margin-bottom 0.1s linear;
@@ -492,10 +704,6 @@ body {
   -webkit-box-shadow: 0px 3px 12px var(--border);
           box-shadow: 0px 3px 12px var(--border);
   margin-bottom: 40px;
-}
-
-.nav {
-  padding: 35px 0 10px 0;
 }
 
 .nav__right {
@@ -616,73 +824,36 @@ body {
   color: var(--text-dark);
 }
 
-.languages {
-  position: relative;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--text-dark);
-  cursor: pointer;
-}
-
-.languages.active .languages__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.languages__selected {
-  position: relative;
+.languages__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 24px;
-  padding-right: 18px;
-}
-
-.languages__selected::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 6px 5px 0 5px;
-  border-color: var(--text-dark) transparent transparent transparent;
-}
-
-.languages__list {
-  position: absolute;
-  top: -21px;
-  left: -21px;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 20px;
-  padding: 20px;
-  border: 1px solid var(--primary);
-  border-radius: 14px;
-  background-color: var(--bg);
-  -webkit-animation: fade 0.2s linear;
-          animation: fade 0.2s linear;
-}
-
-.languages__item {
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
   cursor: pointer;
 }
 
+.languages__item svg {
+  margin-top: -2px;
+}
+
 .languages__item:hover {
-  color: var(--primary);
+  color: #1B4CFB;
+}
+
+.languages__item:hover svg path {
+  fill: #1B4CFB;
+}
+
+.languages__item:not(.selected) {
+  display: none;
 }
 
 .submenu {
@@ -752,6 +923,10 @@ body {
 .burger {
   display: none;
   cursor: pointer;
+}
+
+.bird {
+  margin: 0 48px 0 0;
 }
 
 .hero {
@@ -1325,26 +1500,24 @@ body {
 }
 
 .sending__departure-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 20px;
   width: 100%;
   padding: 20px;
-  border: 1px solid var(--primary);
   border-radius: 14px;
-  background-color: var(--bg);
   -webkit-animation: fade 0.2s linear;
           animation: fade 0.2s linear;
   z-index: 2;
+}
+
+.sending__departure-list .sending__departure-item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.sending__departure-list .sending__departure-item:hover {
+  color: var(--primary);
 }
 
 .sending__departure-item {
@@ -2348,7 +2521,7 @@ p.sign-form__top-text {
 
 @media (max-width: 1449.98px) {
   .logo {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 
   .menu {
@@ -2386,6 +2559,32 @@ p.sign-form__top-text {
   }
 }
 
+@media (max-width: 1200px) {
+  .nav {
+    padding-top: 10px;
+  }
+
+  .menu {
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+
+  .bird {
+    margin-right: 20px;
+  }
+
+  .bird img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sending__datapicker-input {
+    width: 100%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .title {
     font-size: 32px;
@@ -2398,6 +2597,10 @@ p.sign-form__top-text {
     width: 100%;
   }
 
+  .nav {
+    padding-bottom: 10px;
+  }
+
   .nav__right {
     margin-right: 45px;
   }
@@ -2407,6 +2610,10 @@ p.sign-form__top-text {
   }
 
   .languages--desktop {
+    display: none;
+  }
+
+  .bird {
     display: none;
   }
 
@@ -2872,10 +3079,6 @@ p.sign-form__top-text {
     font-size: 16px;
   }
 
-  .nav {
-    padding: 40px 0 10px 0;
-  }
-
   .logo__link {
     width: auto;
     min-width: auto;
@@ -3005,7 +3208,7 @@ p.sign-form__top-text {
   }
 
   .benefits__item-bg {
-    max-width: 50%;
+    max-width: 80%;
   }
 
   .package {
@@ -3124,6 +3327,10 @@ p.sign-form__top-text {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .sending__departure-list .sending__departure-item {
     font-size: 16px;
   }
 
@@ -3300,7 +3507,7 @@ p.sign-form__top-text {
   }
 
   .accordion__item.active .accordion__content {
-    padding: 0 12px 12px 12px;
+    padding: 0 12px 30px 12px;
   }
 
   .accordion__item.active .accordion__content ol {

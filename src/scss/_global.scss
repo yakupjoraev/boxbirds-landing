@@ -317,3 +317,198 @@ body {
 .ui-menu .ui-menu-item-wrapper:hover {
   background-color: inherit;
 }
+
+
+
+
+
+
+
+/*datapicker*/
+
+.datepicker {
+  position: absolute;
+}
+
+.datepicker table tr td span.focused,
+.datepicker table tr td span:hover {
+  color: #000000;
+}
+
+.datepicker-years .datepicker-switch {
+  visibility: hidden;
+}
+
+
+.datepicker-prev {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker-prev::before {
+  content: url("../img/prev.svg");
+}
+
+.datepicker-next {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker-next::before {
+  content: url("../img/next.svg");
+}
+
+.datepicker.datepicker-dropdown {
+  border-radius: 10px;
+  border: 0px;
+  background-color: #F9F9FF !important;
+  box-shadow: 11px 19px 39px 0px rgba(211, 215, 227, 0.47);
+}
+
+.day,
+.datepicker-switch,
+.month,
+.year {
+  transition: all 0.5s ease;
+}
+
+.day:hover,
+.datepicker-switch:hover,
+.month:hover,
+.year:hover {
+  background-color: #E1E8FF !important;
+  transition: all 0.5s ease;
+}
+
+.day.active,
+.datepicker-switch.active,
+.month.active,
+.year.active {
+  background: #B4C0E9 !important;
+}
+
+.day,
+.month,
+.year {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 8px;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+.day.new,
+.day.old,
+.month.new,
+.month.old,
+.year.new,
+.year.old {
+  color: #818895 !important;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom::before {
+  content: url("../img/datepicker-arrow.svg");
+  border: none;
+  top: -12px !important;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom::after {
+  display: none;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom:after .dow {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.datepicker-days::before {
+  content: "Выберите дату";
+  color: #1B4CFB;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 10px 0px 25px 0px;
+}
+
+.sending__datapicker-input {
+  background-image: url(../img/datapicker.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px);
+  background-color: #EDF0F8;
+  font-weight: 500;
+  font-size: 15px;
+  color: #17161B;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+
+  .sending__datapicker-input {
+    width: 100%;
+  }
+}
+
+.sending__datapicker-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.sending__datapicker-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sending__datapicker-input::placeholder {
+  color: #17161B;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+.datepicker tfoot::before {
+  content: "Готово";
+  color: #1B4CFB;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-right: 12px;
+  margin: 23px 0px 10px 0px;
+  cursor: pointer;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 24px;
+  height: 24px;
+  margin: 5px 5px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px !important;
+  padding: 3px 4px;
+}
+
+.datepicker table tr td.highlighted {
+  background: #E1E8FF;
+}
+
+.datepicker .datepicker-switch,
+.datepicker .next,
+.datepicker .prev {
+  background-color: #F9F9FF !important;
+}
+
+.datepicker .datepicker-switch {
+  margin-bottom: -3px;
+}
+
+.datepicker-years td,
+.datepicker-years th,
+.datepicker-months td,
+.datepicker-months th {
+  display: table-cell;
+}

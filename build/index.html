@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
-  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+  <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -24,6 +25,10 @@
           </a>
         </div>
 
+        <div class="bird">
+          <img src="./img/bird.svg" alt="">
+        </div>
+
         <ul class="menu menu--desktop" data-menu-desktop>
           <li class="menu__item" data-menu-item><a href="#about" class="menu__item-link active" data-scroll>О нас</a>
           </li>
@@ -37,10 +42,26 @@
 
         <ul class="menu menu--mobile" data-menu-mobile>
           <div class="languages languages--mobile" data-languages>
-            <div class="languages__selected">RU</div>
             <ul class="languages__list">
-              <li class="languages__item selected" data-languages-item>RU</li>
-              <li class="languages__item" data-languages-item>EN</li>
+              <li class="languages__item selected" data-languages-item="RU">
+                RU
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.77145 4.56466C4.37147 5.04961 3.62853 5.04961 3.22855 4.56466L1.01946 1.88629C0.481499 1.23404 0.945444 0.25 1.79091 0.25L6.20909 0.250001C7.05455 0.250001 7.5185 1.23405 6.98054 1.88629L4.77145 4.56466Z"
+                    fill="#17161B" />
+                </svg>
+
+              </li>
+              <li class="languages__item" data-languages-item="EN">
+                EN
+
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.22855 0.435338C3.62853 -0.0496152 4.37147 -0.0496153 4.77145 0.435338L6.98054 3.11371C7.5185 3.76595 7.05456 4.75 6.20909 4.75L1.79091 4.75C0.945446 4.75 0.4815 3.76595 1.01946 3.11371L3.22855 0.435338Z"
+                    fill="#17161B" />
+                </svg>
+
+              </li>
             </ul>
           </div>
 
@@ -69,11 +90,28 @@
         </ul>
 
         <div class="nav__right">
+
           <div class="languages languages--desktop" data-languages>
-            <div class="languages__selected">RU</div>
             <ul class="languages__list">
-              <li class="languages__item selected" data-languages-item>RU</li>
-              <li class="languages__item" data-languages-item>EN</li>
+              <li class="languages__item selected" data-languages-item="RU">
+                RU
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.77145 4.56466C4.37147 5.04961 3.62853 5.04961 3.22855 4.56466L1.01946 1.88629C0.481499 1.23404 0.945444 0.25 1.79091 0.25L6.20909 0.250001C7.05455 0.250001 7.5185 1.23405 6.98054 1.88629L4.77145 4.56466Z"
+                    fill="#17161B" />
+                </svg>
+
+              </li>
+              <li class="languages__item" data-languages-item="EN">
+                EN
+
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.22855 0.435338C3.62853 -0.0496152 4.37147 -0.0496153 4.77145 0.435338L6.98054 3.11371C7.5185 3.76595 7.05456 4.75 6.20909 4.75L1.79091 4.75C0.945446 4.75 0.4815 3.76595 1.01946 3.11371L3.22855 0.435338Z"
+                    fill="#17161B" />
+                </svg>
+
+              </li>
             </ul>
           </div>
 
@@ -114,25 +152,22 @@
 
       <form action="#" class="hero__sending sending">
         <div class="sending__inner">
-          <div class="sending__departure" data-departure>
-            <!-- <div class="sending__departure-select">
-              Отправить
 
-              <img src="./img/arrow-down.svg" alt="arrow">
-            </div> -->
+          <div class="sending__departure">
+            <ul class="languages__list sending__departure-list" data-languages>
+              <li class="languages__item sending__departure-item  selected" data-languages-item="Отправить">
+                Отправить
 
+                <img src="./img/arrow-down.svg" alt="arrow">
 
-            <!-- 
-            <ul class="sending__departure-list" data-departure-list>
-              <li class="sending__departure-item active" data-departure-item>Отправить</li>
-              <li class="sending__departure-item" data-departure-item>Перевезти</li>
-            </ul> -->
+              </li>
+              <li class="languages__item sending__departure-item " data-languages-item="Перевезти">
+                Перевезти
 
-            <select name="sending" id="sending" class="sending__departure-list">
-              <option selected="selected" class="sending__departure-item active">Отправить</option>
-              <option class="sending__departure-item">Перевезти</option>
-            </select>
-            <img src="./img/arrow-down.svg" alt="arrow">
+                <img src="./img/arrow-down.svg" alt="arrow" style="transform: rotate(180deg);">
+
+              </li>
+            </ul>
           </div>
 
           <div class="sending__cities">
@@ -146,7 +181,13 @@
           </div>
 
           <div class="sending__datapicker">
-            <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000">
+            <!-- <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000"> -->
+
+            <!-- <button type="button" class="sending__datapicker-btn">
+              <img src="./img/datapicker.svg" alt="">
+            </button> -->
+
+            <input type="text" id="datepicker" class="sending__datapicker-input">
           </div>
 
 
@@ -336,25 +377,21 @@
 
     <form action="#" class="package__sending sending">
       <div class="sending__inner">
-        <div class="sending__departure" data-departure>
-          <!-- <div class="sending__departure-select">
-            Отправить
+        <div class="sending__departure">
+          <ul class="languages__list sending__departure-list" data-languages>
+            <li class="languages__item sending__departure-item  selected" data-languages-item="Отправить">
+              Отправить
 
-            <img src="./img/arrow-down.svg" alt="arrow">
-          </div> -->
+              <img src="./img/arrow-down.svg" alt="arrow">
 
+            </li>
+            <li class="languages__item sending__departure-item " data-languages-item="Перевезти">
+              Перевезти
 
-          <!-- 
-          <ul class="sending__departure-list" data-departure-list>
-            <li class="sending__departure-item active" data-departure-item>Отправить</li>
-            <li class="sending__departure-item" data-departure-item>Перевезти</li>
-          </ul> -->
+              <img src="./img/arrow-down.svg" alt="arrow" style="transform: rotate(180deg);">
 
-          <select name="sending" id="sending-2" class="sending__departure-list">
-            <option selected="selected" class="sending__departure-item active">Отправить</option>
-            <option class="sending__departure-item">Перевезти</option>
-          </select>
-          <img src="./img/arrow-down.svg" alt="arrow">
+            </li>
+          </ul>
         </div>
 
         <div class="sending__cities">
@@ -367,9 +404,17 @@
           </div>
         </div>
 
+
         <div class="sending__datapicker">
-          <input class="sending__datapicker-input" type="text" id="datepicker-2" placeholder="00.00.0000">
+          <!-- <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000"> -->
+
+          <!-- <button type="button" class="sending__datapicker-btn">
+            <img src="./img/datapicker.svg" alt="">
+          </button> -->
+
+          <input type="text" id="datepicker-2" class="sending__datapicker-input">
         </div>
+
 
         <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
       </div>
@@ -1276,7 +1321,9 @@
 </body>
 
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/jquery-ui.js"></script>
+<!-- <script src="./js/jquery-ui.js"></script> -->
+<script src="./js/bootstrap-datepicker.min.js"></script>
+
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 

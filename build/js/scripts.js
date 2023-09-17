@@ -40,27 +40,49 @@ function burgerMenu() {
 }
 burgerMenu();
 
-function languageSelection() {
-  let languages = document.querySelectorAll('[data-languages]');
-  let languagesItems = document.querySelectorAll('[data-languages-item]');
+// function languageSelection() {
+//   const languagesContainers = document.querySelectorAll('[data-languages]');
 
-  languages.forEach(language => {
-    language.addEventListener('click', (event) => {
-      event.stopPropagation();
-      language.classList.toggle('active');
-    });
-  });
+//   languagesContainers.forEach(container => {
+//     const selectedElement = container.querySelector('.languages__selected');
+//     const languagesItems = container.querySelectorAll('[data-languages-item]');
 
-  document.addEventListener('click', (event) => {
-    languages.forEach(language => {
-      if (!language.contains(event.target)) {
-        language.classList.remove('active');
-      }
-    });
-  });
-}
+//     container.addEventListener('click', (event) => {
+//       event.stopPropagation();
 
-languageSelection();
+//       // Проверяем, был ли клик на элементе списка языков
+//       languagesItems.forEach(item => {
+//         if (item.contains(event.target)) {
+//           // Получаем текстовое значение выбранного элемента
+//           const selectedLanguage = item.textContent;
+
+//           // Обновляем текст внутри .languages__selected
+//           selectedElement.textContent = selectedLanguage;
+
+//           // Закрываем список языков
+//           container.classList.remove('active');
+//         }
+//       });
+
+//       // Если клик был на .languages__selected, открываем или закрываем список языков
+//       if (selectedElement.contains(event.target)) {
+//         container.classList.toggle('active');
+//       }
+//     });
+//   });
+
+//   document.addEventListener('click', (event) => {
+//     languagesContainers.forEach(container => {
+//       if (!container.contains(event.target)) {
+//         container.classList.remove('active');
+//       }
+//     });
+//   });
+// }
+
+// languageSelection();
+
+
 
 const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
@@ -250,41 +272,121 @@ for (let anchor of anchors) {
 
 
 
-/* Локализация datepicker */
-$.datepicker.regional['ru'] = {
-  closeText: 'Закрыть',
-  prevText: 'Предыдущий',
-  nextText: 'Следующий',
-  currentText: 'Сегодня',
-  monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-  monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-  dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-  dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-  dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-  weekHeader: 'Не',
-  dateFormat: 'dd.mm.yy',
-  firstDay: 1,
-  isRTL: false,
-  showMonthAfterYear: false,
-  yearSuffix: ''
-};
-$.datepicker.setDefaults($.datepicker.regional['ru']);
+// Получаем все обертки с атрибутом data-languages
+const languageWrappers = document.querySelectorAll('[data-languages]');
 
-$(function () {
-  $("#datepicker").datepicker({
-    showOn: "button",
-    buttonImage: "./img/datapicker.svg",
-    buttonImageOnly: true,
-    buttonText: "Выбрать дату"
-  });
+// Добавляем обработчик для каждой обертки
+languageWrappers.forEach((wrapper) => {
+  // Находим элементы внутри текущей обертки
+  const languageItems = wrapper.querySelectorAll('.languages__item');
 
-  $("#datepicker-2").datepicker({
-    showOn: "button",
-    buttonImage: "./img/datapicker.svg",
-    buttonImageOnly: true,
-    buttonText: "Выбрать дату"
+  // Добавляем обработчик клика для элементов списка
+  languageItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      // Убираем класс 'selected' у всех элементов в текущей обертке
+      languageItems.forEach((otherItem) => {
+        otherItem.classList.remove('selected');
+      });
+
+      // Добавляем класс 'selected' только к выбранному элементу
+      item.classList.add('selected');
+
+      // Получаем значение атрибута data-languages-item выбранного элемента
+      const selectedLanguage = item.getAttribute('data-languages-item');
+
+      // Показываем выбранный язык и скрываем остальные в текущей обертке
+      languageItems.forEach((otherItem) => {
+        const language = otherItem.getAttribute('data-languages-item');
+        if (language === selectedLanguage) {
+          otherItem.style.display = 'none';
+        } else {
+          otherItem.style.display = 'flex';
+        }
+      });
+    });
   });
 });
 
-$("#sending").selectmenu();
-$("#sending-2").selectmenu();
+
+
+// /* Локализация datepicker */
+// $.datepicker.regional['ru'] = {
+//   closeText: 'Закрыть',
+//   prevText: 'Предыдущий',
+//   nextText: 'Следующий',
+//   currentText: 'Сегодня',
+//   monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+//   monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+//   dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+//   dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+//   dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+//   weekHeader: 'Не',
+//   dateFormat: 'dd.mm.yy',
+//   firstDay: 1,
+//   isRTL: false,
+//   showMonthAfterYear: false,
+//   yearSuffix: ''
+// };
+// $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+// $(function () {
+//   // $("#datepicker").datepicker({
+//   //   showOn: "button",
+//   //   buttonImage: "./img/datapicker.svg",
+//   //   buttonImageOnly: true,
+//   //   buttonText: "Выбрать дату"
+//   // });
+
+//   $("#datepicker-2").datepicker({
+//     showOn: "button",
+//     buttonImage: "./img/datapicker.svg",
+//     buttonImageOnly: true,
+//     buttonText: "Выбрать дату"
+//   });
+// });
+
+// $(function () {
+//   // Функция для закрытия календаря
+//   function closeDatePicker() {
+//     $("#datepicker").datepicker("hide");
+//   }
+
+//   $("#datepicker").datepicker({
+//     showOn: "button",
+//     buttonImage: "./img/datapicker.svg",
+//     buttonImageOnly: true,
+//     buttonText: "Выбрать дату",
+//   });
+
+//   // Обработка клика на кнопке "Готово"
+//   $(".datepicker-done-button").on("click", function () {
+//     closeDatePicker(); // Закрываем календарь
+//   });
+// });
+
+
+$.fn.datepicker.dates['ru'] = {
+  days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+  daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Вск"],
+  daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+  months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+  monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+  today: "Сегодня",
+  weekStart: 1
+};
+
+$(".sending__datapicker-input").datepicker({
+  format: 'dd.mm.yy',
+  templates: {
+    leftArrow: '<div class="datepicker-prev"> </div>',
+    rightArrow: '<div class="datepicker-next"> </div>'
+  },
+  language: 'ru',
+  autoclose: true
+}).on("show", function (event) {
+  $("tfoot").on("click", function () {
+    $(".sending__datapicker-input").datepicker('hide');
+  });
+});
+
+$(".sending__datapicker-input").datepicker('update', new Date());

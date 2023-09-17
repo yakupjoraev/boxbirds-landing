@@ -10,25 +10,21 @@
 
     <form action="#" class="package__sending sending">
       <div class="sending__inner">
-        <div class="sending__departure" data-departure>
-          <!-- <div class="sending__departure-select">
-            Отправить
+        <div class="sending__departure">
+          <ul class="languages__list sending__departure-list" data-languages>
+            <li class="languages__item sending__departure-item  selected" data-languages-item="Отправить">
+              Отправить
 
-            <img src="./img/arrow-down.svg" alt="arrow">
-          </div> -->
+              <img src="./img/arrow-down.svg" alt="arrow">
 
+            </li>
+            <li class="languages__item sending__departure-item " data-languages-item="Перевезти">
+              Перевезти
 
-          <!-- 
-          <ul class="sending__departure-list" data-departure-list>
-            <li class="sending__departure-item active" data-departure-item>Отправить</li>
-            <li class="sending__departure-item" data-departure-item>Перевезти</li>
-          </ul> -->
+              <img src="./img/arrow-down.svg" alt="arrow" style="transform: rotate(180deg);">
 
-          <select name="sending" id="sending-2" class="sending__departure-list">
-            <option selected="selected" class="sending__departure-item active">Отправить</option>
-            <option class="sending__departure-item">Перевезти</option>
-          </select>
-          <img src="./img/arrow-down.svg" alt="arrow">
+            </li>
+          </ul>
         </div>
 
         <div class="sending__cities">
@@ -41,9 +37,17 @@
           </div>
         </div>
 
+
         <div class="sending__datapicker">
-          <input class="sending__datapicker-input" type="text" id="datepicker-2" placeholder="00.00.0000">
+          <!-- <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000"> -->
+
+          <!-- <button type="button" class="sending__datapicker-btn">
+            <img src="./img/datapicker.svg" alt="">
+          </button> -->
+
+          <input type="text" id="datepicker-2" class="sending__datapicker-input">
         </div>
+
 
         <button type="button" class="sending__btn" data-open-modal data-modal-id="modal1">Найти</button>
       </div>

@@ -447,20 +447,36 @@
   // .sending__departure-list
 
   &__departure-list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    column-gap: 20px;
-    row-gap: 20px;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // display: none;
+    // flex-direction: column;
+    // column-gap: 20px;
+    // row-gap: 20px;
     width: 100%;
     padding: 20px;
-    border: 1px solid var(--primary);
+    // border: 1px solid var(--primary);
     border-radius: 14px;
-    background-color: var(--bg);
+    // background-color: var(--bg);
     animation: fade 0.2s linear;
     z-index: 2;
+
+    .sending__departure-item {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--text-dark);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primary);
+      }
+
+      @media (max-width: $breakpoint768) {
+        font-size: 16px;
+      }
+    }
 
     @media (max-width: $breakpoint768) {
       padding: 12px;

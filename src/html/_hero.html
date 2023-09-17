@@ -22,25 +22,22 @@
 
       <form action="#" class="hero__sending sending">
         <div class="sending__inner">
-          <div class="sending__departure" data-departure>
-            <!-- <div class="sending__departure-select">
-              Отправить
 
-              <img src="./img/arrow-down.svg" alt="arrow">
-            </div> -->
+          <div class="sending__departure">
+            <ul class="languages__list sending__departure-list" data-languages>
+              <li class="languages__item sending__departure-item  selected" data-languages-item="Отправить">
+                Отправить
 
+                <img src="./img/arrow-down.svg" alt="arrow">
 
-            <!-- 
-            <ul class="sending__departure-list" data-departure-list>
-              <li class="sending__departure-item active" data-departure-item>Отправить</li>
-              <li class="sending__departure-item" data-departure-item>Перевезти</li>
-            </ul> -->
+              </li>
+              <li class="languages__item sending__departure-item " data-languages-item="Перевезти">
+                Перевезти
 
-            <select name="sending" id="sending" class="sending__departure-list">
-              <option selected="selected" class="sending__departure-item active">Отправить</option>
-              <option class="sending__departure-item">Перевезти</option>
-            </select>
-            <img src="./img/arrow-down.svg" alt="arrow">
+                <img src="./img/arrow-down.svg" alt="arrow" style="transform: rotate(180deg);">
+
+              </li>
+            </ul>
           </div>
 
           <div class="sending__cities">
@@ -54,7 +51,13 @@
           </div>
 
           <div class="sending__datapicker">
-            <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000">
+            <!-- <input class="sending__datapicker-input" type="text" id="datepicker" placeholder="00.00.0000"> -->
+
+            <!-- <button type="button" class="sending__datapicker-btn">
+              <img src="./img/datapicker.svg" alt="">
+            </button> -->
+
+            <input type="text" id="datepicker" class="sending__datapicker-input">
           </div>
 
 
