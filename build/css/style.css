@@ -600,12 +600,33 @@ body {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px);
   background-color: #EDF0F8;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #17161B;
   padding: 0 10px;
   cursor: pointer;
   border-radius: 10px;
+}
+
+.sending__datapicker-input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__datapicker-input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__datapicker-input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__datapicker-input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__datapicker-input::placeholder {
+  font-family: "Montserrat", sans-serif;
 }
 
 .sending__datapicker-input::-webkit-calendar-picker-indicator {
@@ -673,6 +694,12 @@ body {
   padding: 3px 4px;
 }
 
+.datepicker-dropdown.datepicker-orient-top:before {
+  border-top: 7px solid transparent !important;
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+}
+
 .datepicker table tr td.highlighted {
   background: #E1E8FF;
 }
@@ -684,7 +711,7 @@ body {
 }
 
 .datepicker .datepicker-switch {
-  margin-bottom: -3px;
+  margin-bottom: -5px;
 }
 
 .datepicker-years td,
@@ -1575,11 +1602,32 @@ body {
   padding: 10px 20px 10px 38px;
   background-color: var(--src-input);
   border-radius: 14px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   color: var(--text-dark);
   outline: 0;
+}
+
+.sending__city-input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__city-input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__city-input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__city-input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sending__city-input::placeholder {
+  font-family: "Montserrat", sans-serif;
 }
 
 .sending__datapicker {
@@ -1663,6 +1711,7 @@ body {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: 14px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
@@ -1840,6 +1889,7 @@ body {
 }
 
 .accordion__item {
+  padding-bottom: 34px;
   background-color: var(--bg);
   -webkit-box-shadow: 0px 4px 36px rgba(171, 184, 236, 0.24);
           box-shadow: 0px 4px 36px rgba(171, 184, 236, 0.24);
@@ -1859,14 +1909,15 @@ body {
   position: relative;
   background-color: var(--bg);
   padding: 34px;
+  padding-bottom: 0;
   font-weight: 500;
   font-size: 32px;
   line-height: 150%;
   color: var(--text-dark);
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease, padding 0.2s linear;
+  -o-transition: background-color 0.2s ease, padding 0.2s linear;
+  transition: background-color 0.2s ease, padding 0.2s linear;
 }
 
 .accordion__header::before {
@@ -1895,15 +1946,16 @@ body {
 }
 
 .accordion__content {
+  padding: 0 32px 0 68px;
   max-height: 0;
   overflow: hidden;
   font-weight: 500;
   font-size: 24px;
   line-height: 180%;
   color: var(--primary);
-  -webkit-transition: max-height 0.2s ease, padding 0.2s ease;
-  -o-transition: max-height 0.2s ease, padding 0.2s ease;
-  transition: max-height 0.2s ease, padding 0.2s ease;
+  -webkit-transition: max-height 0.6s ease;
+  -o-transition: max-height 0.6s ease;
+  transition: max-height 0.6s ease;
 }
 
 .accordion__content a {
@@ -1911,7 +1963,6 @@ body {
 }
 
 .accordion__item.active .accordion__content {
-  padding: 0 32px 32px 68px;
   max-height: 1000px;
 }
 
@@ -2870,8 +2921,13 @@ p.sign-form__top-text {
     row-gap: 20px;
   }
 
+  .accordion__item {
+    padding-bottom: 24px;
+  }
+
   .accordion__header {
     padding: 24px;
+    padding-bottom: 0;
     font-size: 24px;
   }
 
@@ -2884,11 +2940,11 @@ p.sign-form__top-text {
   }
 
   .accordion__content {
-    font-size: 16px;
+    padding: 0 24px 0 24px;
   }
 
-  .accordion__item.active .accordion__content {
-    padding: 0 24px 24px 24px;
+  .accordion__content {
+    font-size: 16px;
   }
 
   .accordion__item.active .accordion__content ol {
@@ -3485,12 +3541,17 @@ p.sign-form__top-text {
     margin-bottom: 34px;
   }
 
+  .accordion__item {
+    padding-bottom: 12px;
+  }
+
   .accordion__item.active .accordion__header {
     padding-bottom: 30px;
   }
 
   .accordion__header {
     padding: 12px;
+    padding-bottom: 0;
     font-size: 16px;
   }
 
@@ -3503,11 +3564,11 @@ p.sign-form__top-text {
   }
 
   .accordion__content {
-    font-size: 12px;
+    padding: 0 12px 0 12px;
   }
 
-  .accordion__item.active .accordion__content {
-    padding: 0 12px 30px 12px;
+  .accordion__content {
+    font-size: 12px;
   }
 
   .accordion__item.active .accordion__content ol {

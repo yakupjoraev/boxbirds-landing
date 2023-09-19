@@ -563,11 +563,16 @@
     padding: 10px 20px 10px 38px;
     background-color: var(--src-input);
     border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
     color: var(--text-dark);
     outline: 0;
+
+    &::placeholder {
+      font-family: 'Montserrat', sans-serif;
+    }
 
     @media (max-width: $breakpoint768) {
       height: 48px;
@@ -663,6 +668,7 @@
     background-color: var(--primary);
     border: 1px solid var(--primary);
     border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;

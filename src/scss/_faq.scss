@@ -40,10 +40,20 @@
 }
 
 .accordion__item {
+  padding-bottom: 34px;
   background-color: var(--bg);
   box-shadow: 0px 4px 36px rgba(171, 184, 236, 0.24);
   border-radius: 28px;
   overflow: hidden;
+
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding-bottom: 12px;
+  }
 }
 
 .accordion__item.active .accordion__header::after {
@@ -62,12 +72,13 @@
   position: relative;
   background-color: var(--bg);
   padding: 34px;
+  padding-bottom: 0;
   font-weight: 500;
   font-size: 32px;
   line-height: 150%;
   color: var(--text-dark);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, padding 0.2s linear;
 
   &::before {
     content: '';
@@ -94,6 +105,7 @@
 
   @media (max-width: $breakpoint992) {
     padding: 24px;
+    padding-bottom: 0;
     font-size: 24px;
 
     &::before {
@@ -107,6 +119,7 @@
 
   @media (max-width: $breakpoint768) {
     padding: 12px;
+    padding-bottom: 0;
     font-size: 16px;
 
     &::before {
@@ -120,13 +133,26 @@
 }
 
 .accordion__content {
+  padding: 0 32px 0 68px;
   max-height: 0;
   overflow: hidden;
   font-weight: 500;
   font-size: 24px;
   line-height: 180%;
   color: var(--primary);
-  transition: max-height 0.2s ease, padding 0.2s ease;
+  transition: max-height 0.6s ease;
+
+
+  @media (max-width: $breakpoint992) {
+    padding: 0 24px 0 24px;
+
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 0 12px 0 12px;
+
+
+  }
 
   & a {
     color: var(--primary);
@@ -144,11 +170,9 @@
 .accordion__item.active .accordion__header {}
 
 .accordion__item.active .accordion__content {
-  padding: 0 32px 32px 68px;
   max-height: 1000px;
 
   @media (max-width: $breakpoint992) {
-    padding: 0 24px 24px 24px;
 
     ol {
       padding-left: 20px;
@@ -156,7 +180,6 @@
   }
 
   @media (max-width: $breakpoint768) {
-    padding: 0 12px 30px 12px;
 
     ol {
       padding-left: 16px;

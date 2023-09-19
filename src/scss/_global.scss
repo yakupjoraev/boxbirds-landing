@@ -436,12 +436,17 @@ body {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px);
   background-color: #EDF0F8;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #17161B;
   padding: 0 10px;
   cursor: pointer;
   border-radius: 10px;
+
+  &::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 @media (max-width: 992px) {
@@ -492,6 +497,12 @@ body {
   padding: 3px 4px;
 }
 
+.datepicker-dropdown.datepicker-orient-top:before {
+  border-top: 7px solid transparent !important;
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+}
+
 .datepicker table tr td.highlighted {
   background: #E1E8FF;
 }
@@ -503,7 +514,7 @@ body {
 }
 
 .datepicker .datepicker-switch {
-  margin-bottom: -3px;
+  margin-bottom: -5px;
 }
 
 .datepicker-years td,
