@@ -34,7 +34,7 @@
     z-index: 23;
 
     @media (max-width: $breakpoint992) {
-      margin-right: 45px;
+      margin-right: 20px;
     }
 
     @media (max-width: 374px) {
@@ -71,18 +71,32 @@
     border-radius: 14px;
 
     @media (max-width: $breakpoint768) {
-      width: auto;
-      min-width: auto;
-      height: auto;
-      border-radius: 0;
-      box-shadow: none;
-      border: 0;
+
+      // width: auto;
+      // min-width: auto;
+      // height: auto;
+      // border-radius: 0;
+      // box-shadow: none;
+      // border: 0;
+    }
+
+    @media (max-width: 374px) {
+      min-width: 128px;
+      width: 128px;
+      height: 36px;
     }
   }
 
   // .logo__img
 
-  &__img {}
+  &__img {
+    max-width: 124px;
+    margin: auto;
+
+    @media (max-width: 374px) {
+      max-width: 100px;
+    }
+  }
 }
 
 .menu {

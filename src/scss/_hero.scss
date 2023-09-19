@@ -80,7 +80,7 @@
 
     @media (max-width: $breakpoint992) {
       text-align: center;
-      margin: 0 auto 312px;
+      margin: 0 auto 30px;
     }
   }
 
@@ -179,4 +179,21 @@
   // .package__card-detail
 
   &__card-detail {}
+}
+
+.hero__pic {
+  display: none;
+
+  @media (max-width: $breakpoint992) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    // max-width: 740px;
+  }
 }

@@ -783,6 +783,11 @@ body {
   border-radius: 14px;
 }
 
+.logo__img {
+  max-width: 124px;
+  margin: auto;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,6 +1012,10 @@ body {
   position: relative;
   margin-top: -30px;
   z-index: 2;
+}
+
+.hero__pic {
+  display: none;
 }
 
 .about {
@@ -2653,7 +2662,7 @@ p.sign-form__top-text {
   }
 
   .nav__right {
-    margin-right: 45px;
+    margin-right: 20px;
   }
 
   .menu--desktop {
@@ -2684,7 +2693,7 @@ p.sign-form__top-text {
 
   .hero__descr {
     text-align: center;
-    margin: 0 auto 312px;
+    margin: 0 auto 30px;
   }
 
   .hero__link {
@@ -2705,6 +2714,21 @@ p.sign-form__top-text {
 
   .hero__sending {
     margin-top: 0;
+  }
+
+  .hero__pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
   }
 
   .about {
@@ -3133,16 +3157,6 @@ p.sign-form__top-text {
   .ui-widget-content .ui-state-active,
   .ui-menu .ui-menu-item-wrapper {
     font-size: 16px;
-  }
-
-  .logo__link {
-    width: auto;
-    min-width: auto;
-    height: auto;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    border: 0;
   }
 
   .hero {
@@ -3755,6 +3769,16 @@ p.sign-form__top-text {
 @media (max-width: 374px) {
   .nav__right {
     margin-right: 20px;
+  }
+
+  .logo__link {
+    min-width: 128px;
+    width: 128px;
+    height: 36px;
+  }
+
+  .logo__img {
+    max-width: 100px;
   }
 
   .enter {
